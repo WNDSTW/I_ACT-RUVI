@@ -1,0 +1,141 @@
+SELECT count (*) as GedungAdministrasi
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Gedung Administrasi' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	           
+	           SELECT count (*) as KantorInfrastrukturBP
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Kantor Infrastruktur - BP' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	     
+  
+	           SELECT count (*) as Brassalley
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Brassalley' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as FieldOfficeTA
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Field Office - TA' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as Legal
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Legal' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as Marine
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Marine' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as ITCOMM
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='IT - COMM' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as Angkutan
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Angkutan' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as PR
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='PR' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as MedicalDualCard
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Medical Dual Card' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as EXOR
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='EXOR' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as Laboratory
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Laboratory' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+	             
+	           SELECT count (*) as Procurement
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='Procurement' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate()) and 
+	           
+	             
+	           SELECT count (*) as NewFieldOffice
+	FROM			[PWNT].[dbo].[AREA_OCCUPANT] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_C] ON [PWNT].[dbo].[AREA_OCCUPANT].[BADGE_NO] = [PWNT].[dbo].[BADGE_C].[ID] AND [PWNT].[dbo].[AREA_OCCUPANT].[CARD_NO] = [PWNT].[dbo].[BADGE_C].[CARDNO] INNER JOIN	
+					[PWNT].[dbo].[COMPANY] ON [PWNT].[dbo].[BADGE_C].[COMPANY_ID] = [PWNT].[dbo].[COMPANY].[ID] INNER JOIN	
+	               [PWNT].[dbo].[AREA] ON [PWNT].[dbo].[AREA_OCCUPANT].[AREA_ID] = [PWNT].[dbo].[AREA].[ID] INNER JOIN	
+	               [PWNT].[dbo].[BADGE_V] ON [PWNT].[dbo].[BADGE_C].[ID] = [PWNT].[dbo].[BADGE_V].[ID]	
+	               where [PWNT].[dbo].[AREA].[AREA_NAME]='New Field Office' and convert (date,[PWNT].[dbo].[AREA_OCCUPANT].[event_time]) = convert (date,getdate())
+	           
+
+
+
+
+
+
+
+Additional Where
+
+	and [PWNT].[dbo].[COMPANY].[NAM]= 'PEKERJA'
+	and [PWNT].[dbo].[COMPANY].[NAM]= 'TKJP KILANG'
+
+	dll.	
+
+
+	           

@@ -1,0 +1,1836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D698792-A55E-43EC-B9CB-A8CA5233ECF6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>I_ACT</RootNamespace>
+    <AssemblyName>I_ACT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\MonitoringJabatan\Pertamina.HRD\Pertamina.HRD\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.80.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\..\Inventories\Pertamina.Inventories\Pertamina.Inventories\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Pertamina.Utility">
+      <HintPath>..\..\..\TraserNotif\TraserNotif\Pertamina.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net40\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net40\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Content\admin\dist\css\AdminLTE.css" />
+    <Content Include="Content\admin\dist\css\AdminLTE.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-black-light.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-black-light.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-black.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-black.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-blue-light.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-blue-light.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-blue.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-blue.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-green-light.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-green-light.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-green.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-green.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-purple-light.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-purple-light.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-purple.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-purple.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-red-light.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-red-light.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-red.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-red.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-yellow-light.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-yellow-light.min.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-yellow.css" />
+    <Content Include="Content\admin\dist\css\skins\skin-yellow.min.css" />
+    <Content Include="Content\admin\dist\css\skins\_all-skins.css" />
+    <Content Include="Content\admin\dist\css\skins\_all-skins.min.css" />
+    <Content Include="Content\admin\dist\img\avatar.png" />
+    <Content Include="Content\admin\dist\img\avatar04.png" />
+    <Content Include="Content\admin\dist\img\avatar2.png" />
+    <Content Include="Content\admin\dist\img\avatar3.png" />
+    <Content Include="Content\admin\dist\img\avatar5.png" />
+    <Content Include="Content\admin\dist\img\boxed-bg.jpg" />
+    <Content Include="Content\admin\dist\img\boxed-bg.png" />
+    <Content Include="Content\admin\dist\img\credit\american-express.png" />
+    <Content Include="Content\admin\dist\img\credit\cirrus.png" />
+    <Content Include="Content\admin\dist\img\credit\mastercard.png" />
+    <Content Include="Content\admin\dist\img\credit\mestro.png" />
+    <Content Include="Content\admin\dist\img\credit\paypal.png" />
+    <Content Include="Content\admin\dist\img\credit\paypal2.png" />
+    <Content Include="Content\admin\dist\img\credit\visa.png" />
+    <Content Include="Content\admin\dist\img\default-50x50.gif" />
+    <Content Include="Content\admin\dist\img\icons.png" />
+    <Content Include="Content\admin\dist\img\photo1.png" />
+    <Content Include="Content\admin\dist\img\photo2.png" />
+    <Content Include="Content\admin\dist\img\photo3.jpg" />
+    <Content Include="Content\admin\dist\img\photo4.jpg" />
+    <Content Include="Content\admin\dist\img\user1-128x128.jpg" />
+    <Content Include="Content\admin\dist\img\user2-160x160.jpg" />
+    <Content Include="Content\admin\dist\img\user3-128x128.jpg" />
+    <Content Include="Content\admin\dist\img\user4-128x128.jpg" />
+    <Content Include="Content\admin\dist\img\user5-128x128.jpg" />
+    <Content Include="Content\admin\dist\img\user6-128x128.jpg" />
+    <Content Include="Content\admin\dist\img\user7-128x128.jpg" />
+    <Content Include="Content\admin\dist\img\user8-128x128.jpg" />
+    <Content Include="Content\admin\dist\js\app.js" />
+    <Content Include="Content\admin\dist\js\app.min.js" />
+    <Content Include="Content\admin\dist\js\demo.js" />
+    <Content Include="Content\admin\dist\js\pages\dashboard.js" />
+    <Content Include="Content\admin\dist\js\pages\dashboard2.js" />
+    <Content Include="Content\admin\js\moment.min.js" />
+    <Content Include="Content\admin\js\raphael-min.js" />
+    <Content Include="Content\admin_dark\css\bootstrap-rtl.min.css" />
+    <Content Include="Content\admin_dark\css\bootstrap.css" />
+    <Content Include="Content\admin_dark\css\bootstrap.min.css" />
+    <Content Include="Content\admin_dark\css\entypo.css" />
+    <Content Include="Content\admin_dark\css\font-awesome.min.css" />
+    <Content Include="Content\admin_dark\css\mouldifi-core.css" />
+    <Content Include="Content\admin_dark\css\mouldifi-forms.css" />
+    <Content Include="Content\admin_dark\css\mouldifi-rtl-core.css" />
+    <Content Include="Content\admin_dark\css\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="Content\admin_dark\css\plugins\c3\c3.min.css" />
+    <Content Include="Content\admin_dark\css\plugins\chartist\chartist.min.css" />
+    <Content Include="Content\admin_dark\css\plugins\colorpicker\bootstrap-colorpicker.css" />
+    <Content Include="Content\admin_dark\css\plugins\colorpicker\images\alpha-horizontal.png" />
+    <Content Include="Content\admin_dark\css\plugins\colorpicker\images\alpha.png" />
+    <Content Include="Content\admin_dark\css\plugins\colorpicker\images\hue-horizontal.png" />
+    <Content Include="Content\admin_dark\css\plugins\colorpicker\images\hue.png" />
+    <Content Include="Content\admin_dark\css\plugins\colorpicker\images\saturation.png" />
+    <Content Include="Content\admin_dark\css\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Content\admin_dark\css\plugins\datepicker\bootstrap-datepicker.css" />
+    <Content Include="Content\admin_dark\css\plugins\dropzone\dropzone.css" />
+    <Content Include="Content\admin_dark\css\plugins\dropzone\images\spritemap%402x.png" />
+    <Content Include="Content\admin_dark\css\plugins\dropzone\images\spritemap.png" />
+    <Content Include="Content\admin_dark\css\plugins\jvectormap\jquery-jvectormap-2.0.3.css" />
+    <Content Include="Content\admin_dark\css\plugins\markdown\bootstrap-markdown.min.css" />
+    <Content Include="Content\admin_dark\css\plugins\morris\morris.css" />
+    <Content Include="Content\admin_dark\css\plugins\nouislider\nouislider.css" />
+    <Content Include="Content\admin_dark\css\plugins\scrollbar\perfect-scrollbar.css" />
+    <Content Include="Content\admin_dark\css\plugins\select2\select2.css" />
+    <Content Include="Content\admin_dark\css\plugins\summernote\summernote.css" />
+    <Content Include="Content\admin_dark\css\sidebar.css" />
+    <Content Include="Content\admin_dark\css\traffic_light.css" />
+    <Content Include="Content\admin_dark\fonts\entypo.svg" />
+    <Content Include="Content\admin_dark\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\admin_dark\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\admin_dark\images\1.png" />
+    <Content Include="Content\admin_dark\images\2.png" />
+    <Content Include="Content\admin_dark\images\3ok.png" />
+    <Content Include="Content\admin_dark\images\4.png" />
+    <Content Include="Content\admin_dark\images\5.png" />
+    <Content Include="Content\admin_dark\images\6.png" />
+    <Content Include="Content\admin_dark\images\60th.png" />
+    <Content Include="Content\admin_dark\images\7.png" />
+    <Content Include="Content\admin_dark\images\8.png" />
+    <Content Include="Content\admin_dark\images\9.png" />
+    <Content Include="Content\admin_dark\images\alamat.png" />
+    <Content Include="Content\admin_dark\images\alarm.jpg" />
+    <Content Include="Content\admin_dark\images\alex-dolgove.png" />
+    <Content Include="Content\admin_dark\images\annual-book.jpg" />
+    <Content Include="Content\admin_dark\images\bar-chart-icon.png" />
+    <Content Include="Content\admin_dark\images\camera.jpg" />
+    <Content Include="Content\admin_dark\images\cardboard.jpg" />
+    <Content Include="Content\admin_dark\images\center.png" />
+    <Content Include="Content\admin_dark\images\chocolate.jpg" />
+    <Content Include="Content\admin_dark\images\clock.jpg" />
+    <Content Include="Content\admin_dark\images\domnic-brown.png" />
+    <Content Include="Content\admin_dark\images\enter.png" />
+    <Content Include="Content\admin_dark\images\favicon.ico" />
+    <Content Include="Content\admin_dark\images\headphone.jpg" />
+    <Content Include="Content\admin_dark\images\icon-close.png" />
+    <Content Include="Content\admin_dark\images\imac-40.jpg" />
+    <Content Include="Content\admin_dark\images\iphone.jpg" />
+    <Content Include="Content\admin_dark\images\john-smith.png" />
+    <Content Include="Content\admin_dark\images\led.jpg" />
+    <Content Include="Content\admin_dark\images\like-icon.png" />
+    <Content Include="Content\admin_dark\images\loading.gif" />
+    <Content Include="Content\admin_dark\images\logo.png" />
+    <Content Include="Content\admin_dark\images\logopertamina.png" />
+    <Content Include="Content\admin_dark\images\mac.jpg" />
+    <Content Include="Content\admin_dark\images\macbook-40.jpg" />
+    <Content Include="Content\admin_dark\images\man-3.jpg" />
+    <Content Include="Content\admin_dark\images\media-1.jpg" />
+    <Content Include="Content\admin_dark\images\media-2.jpg" />
+    <Content Include="Content\admin_dark\images\media-3.jpg" />
+    <Content Include="Content\admin_dark\images\no1.png" />
+    <Content Include="Content\admin_dark\images\office-40.jpg" />
+    <Content Include="Content\admin_dark\images\pertamina2.png" />
+    <Content Include="Content\admin_dark\images\prioritasb.png" />
+    <Content Include="Content\admin_dark\images\running-shoe.jpg" />
+    <Content Include="Content\admin_dark\images\snooker.jpg" />
+    <Content Include="Content\admin_dark\images\stella-johnson.png" />
+    <Content Include="Content\admin_dark\images\video-1.jpg" />
+    <Content Include="Content\admin_dark\js\bootstrap.js" />
+    <Content Include="Content\admin_dark\js\bootstrap.min.js" />
+    <Content Include="Content\admin_dark\js\functions.js" />
+    <Content Include="Content\admin_dark\js\html5shiv.min.js" />
+    <Content Include="Content\admin_dark\js\jquery.min.js" />
+    <Content Include="Content\admin_dark\js\jquery.validate.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\blockui-master\jquery-ui.js" />
+    <Content Include="Content\admin_dark\js\plugins\blockui-master\jquery.blockUI.js" />
+    <Content Include="Content\admin_dark\js\plugins\blockui-master\license.txt" />
+    <Content Include="Content\admin_dark\js\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5 - Copy.js" />
+    <Content Include="Content\admin_dark\js\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
+    <Content Include="Content\admin_dark\js\plugins\bootstrap-wysihtml5\wysihtml5-0.3.0.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\c3\c3-script.js" />
+    <Content Include="Content\admin_dark\js\plugins\c3\c3.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\c3\d3.v3.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\chartist\chartist-script.js" />
+    <Content Include="Content\admin_dark\js\plugins\chartist\chartist.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\chartjs\Chart.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\chartjs\chartjs-script.js" />
+    <Content Include="Content\admin_dark\js\plugins\chartjs\lib\chart.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\chartjs\lib\jquery-2.1.3.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\chartjs\pretty-doughtnut.js" />
+    <Content Include="Content\admin_dark\js\plugins\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\dataTables.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\autoFill.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\autoFill.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\autoFill.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\autoFill.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\autoFill.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\autoFill.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\autoFill.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\autoFill.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\alwaysAsk.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\events.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\fills.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\focus.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\keyTable.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\plugins.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\initialisation\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\images\filler.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\js\autoFill.bootstrap.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\js\autoFill.bootstrap.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\js\autoFill.foundation.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\js\autoFill.foundation.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\js\autoFill.jqueryui.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\js\autoFill.jqueryui.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\Readme.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.bootstrap4.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.bootstrap4.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\buttons.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\api\addRemove.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\api\enable.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\api\group.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\api\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\api\text.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\columnGroups.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\columnsToggle.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\layout.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\restore.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\stateSave.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\column_visibility\text.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\copyi18n.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\filename.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\hidden.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\pdfMessage.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\pdfPage.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\swfPath.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\flash\tsv.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\copyi18n.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\filename.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\outputFormat-function.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\outputFormat-orthogonal.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\pdfImage.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\pdfMessage.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\pdfOpen.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\pdfPage.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\html5\tsv.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\className.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\collections-autoClose.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\collections-sub.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\collections.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\custom.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\export.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\keys.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\multiple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\new.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\pageLength.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\plugins.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\initialisation\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\print\autoPrint.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\print\columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\print\customisation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\print\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\print\message.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\print\select.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\print\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\styling\bootstrap4.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\styling\icons.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.bootstrap.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.bootstrap.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.bootstrap4.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.bootstrap4.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.colVis.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.colVis.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.flash.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.flash.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.foundation.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.foundation.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.html5.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.html5.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.jqueryui.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.jqueryui.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.print.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\buttons.print.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\dataTables.buttons.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\js\dataTables.buttons.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\swf\flashExport.swf" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\colReorder.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\colReorder.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\colReorder.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\colReorder.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\colReorder.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\colReorder.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\colReorder.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\colReorder.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\initialisation\col_filter.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\initialisation\new_init.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\initialisation\predefined.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\initialisation\realtime.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\initialisation\reset.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\initialisation\scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\initialisation\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\integration\colvis.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\integration\fixedcolumns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\integration\fixedheader.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\integration\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\integration\responsive.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\integration\server_side.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\integration\state_save.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\styling\alt_insert.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\images\insert.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\restore.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\text.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\colvis.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\css_size.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\index_column.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\left_right_columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\right_column.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\server-side-processing.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\size_fixed.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\size_fluid.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\two_columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\integration\api.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\integration\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\integration\select-checkbox.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\integration\select.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\colvis.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\col_filter.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\rowspan.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\rtl.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\styling\server-side-processing.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\integration\buttons.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\integration\colreorder.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\integration\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\integration\responsive-bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\integration\responsive.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\enable-disable.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\header_footer.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\horizontal-scroll.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\new.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\offset.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\show-hide.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\options\two_tables.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\keyTable.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\keyTable.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\keyTable.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\keyTable.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\keyTable.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\keyTable.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\keyTable.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\css\keyTable.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\events.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\html.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\initialisation\events.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\initialisation\scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\initialisation\server-side.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\initialisation\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\initialisation\stateSave.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\styling\focusStyle.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\Readme.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\responsive.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\responsive.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\responsive.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\responsive.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\responsive.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\responsive.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\responsive.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\responsive.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\column-control\auto.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\column-control\classes.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\column-control\colreorder.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\column-control\column-visibility.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\column-control\columnPriority.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\column-control\fixedHeader.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\column-control\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\column-control\init-classes.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-control\complexHeader.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-types\bootstrap-modal.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-types\foundation-modal.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-types\immediateShow.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-types\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-types\jqueryui-modal.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\display-types\modal.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\js\responsive.bootstrap.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\js\responsive.bootstrap.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\js\responsive.foundation.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\js\responsive.foundation.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\js\responsive.jqueryui.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\js\responsive.jqueryui.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\css\rowReorder.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\css\rowReorder.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\css\rowReorder.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\css\rowReorder.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\css\rowReorder.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\css\rowReorder.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\css\rowReorder.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\css\rowReorder.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\initialisation\defaults.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\initialisation\events.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\initialisation\responsive.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\initialisation\restrictedOrdering.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\initialisation\scroll.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\initialisation\selector.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\initialisation\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\styling\reorderClass.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\examples\styling\snapX.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\js\dataTables.rowReorder.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\js\dataTables.rowReorder.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\scroller.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\scroller.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\scroller.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\scroller.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\scroller.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\scroller.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\scroller.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\css\scroller.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\initialisation\api_scrolling.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\initialisation\fixedColumns.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\initialisation\large_js_source.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\initialisation\server-side_processing.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\initialisation\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\initialisation\state_saving.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\Readme.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\css\select.bootstrap.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\css\select.bootstrap.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\css\select.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\css\select.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\css\select.foundation.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\css\select.foundation.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\css\select.jqueryui.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\css\select.jqueryui.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\api\events.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\api\get.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\api\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\api\select.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\blurable.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\buttons.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\cells.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\checkbox.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\deferRender.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\i18n.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\multi.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\reload.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\initialisation\single.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\styling\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\styling\foundation.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\styling\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\examples\styling\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\js\dataTables.select.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\js\dataTables.select.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\License.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\collection.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\simple.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\collection.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\copy.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\csv.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\pdf.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\print.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\xls.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\images\sort_asc.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\images\sort_both.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\images\sort_desc.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\jszip.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\license.txt" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\pdfmake.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\vfs_fonts.js" />
+    <Content Include="Content\admin_dark\js\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="Content\admin_dark\js\plugins\dropzone\dropzone.js" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\angular.html" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\excanvas.compiled.js" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\img\easy-pie-chart.png" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\index.html" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\jquery.html" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\old-ie.html" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\requirejs.html" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\style.css" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\dist\angular.easypiechart.js" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\dist\angular.easypiechart.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\dist\easypiechart.js" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\dist\easypiechart.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\dist\jquery.easing.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\dist\jquery.easypiechart.js" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\dist\jquery.easypiechart.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\flot-script.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.colorhelpers.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.canvas.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.categories.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.errorbars.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.image.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.navigate.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.selection.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.stack.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.symbol.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.threshold.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.time.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\flot\LICENSE.txt" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\css\highcharts.css" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts-3d.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts-3d.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts-more.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts-more.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts-3d.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts-3d.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts-more.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts-more.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\accessibility.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\accessibility.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\annotations.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\annotations.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\boost-canvas.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\boost-canvas.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\boost.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\boost.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\broken-axis.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\broken-axis.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\bullet.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\bullet.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\data.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\data.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\drag-panes.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\drag-panes.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\drilldown.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\drilldown.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\export-data.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\export-data.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\exporting.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\exporting.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\funnel.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\funnel.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\gantt.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\gantt.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\grid-axis.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\grid-axis.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\heatmap.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\heatmap.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\histogram-bellcurve.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\histogram-bellcurve.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\item-series.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\item-series.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\no-data-to-display.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\no-data-to-display.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\offline-exporting.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\offline-exporting.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\oldie.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\oldie.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\overlapping-datalabels.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\overlapping-datalabels.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\parallel-coordinates.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\parallel-coordinates.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\pareto.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\pareto.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\sankey.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\sankey.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\series-label.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\series-label.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\solid-gauge.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\solid-gauge.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\static-scale.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\static-scale.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\stock.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\stock.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\streamgraph.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\streamgraph.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\sunburst.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\sunburst.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\tilemap.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\tilemap.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\treemap.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\treemap.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\variable-pie.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\variable-pie.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\variwide.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\variwide.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\vector.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\vector.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\windbarb.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\windbarb.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\wordcloud.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\wordcloud.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\xrange.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\xrange.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\avocado.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\avocado.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-blue.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-blue.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-green.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-green.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-unica.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-unica.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\gray.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\gray.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\grid-light.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\grid-light.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\grid.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\grid.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\sand-signika.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\sand-signika.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\skies.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\skies.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\sunset.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\sunset.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\lib\canvg.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\lib\canvg.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\lib\jspdf.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\lib\jspdf.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\lib\rgbcolor.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\lib\rgbcolor.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\lib\svg2pdf.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\lib\svg2pdf.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\accessibility.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\accessibility.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\annotations.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\annotations.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\boost-canvas.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\boost-canvas.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\boost.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\boost.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\broken-axis.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\broken-axis.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\bullet.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\bullet.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\data.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\data.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\drag-panes.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\drag-panes.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\drilldown.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\drilldown.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\export-data.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\export-data.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\exporting.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\exporting.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\funnel.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\funnel.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\gantt.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\gantt.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\grid-axis.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\grid-axis.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\heatmap.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\heatmap.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\histogram-bellcurve.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\histogram-bellcurve.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\item-series.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\item-series.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\no-data-to-display.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\no-data-to-display.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\offline-exporting.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\offline-exporting.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\oldie.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\oldie.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\overlapping-datalabels.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\overlapping-datalabels.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\parallel-coordinates.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\parallel-coordinates.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\pareto.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\pareto.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\sankey.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\sankey.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\series-label.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\series-label.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\solid-gauge.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\solid-gauge.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\static-scale.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\static-scale.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\stock.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\stock.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\streamgraph.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\streamgraph.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\sunburst.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\sunburst.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\tilemap.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\tilemap.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\treemap.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\treemap.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\variable-pie.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\variable-pie.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\variwide.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\variwide.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\vector.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\vector.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\windbarb.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\windbarb.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\wordcloud.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\wordcloud.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\xrange.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\xrange.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\readme.txt" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\avocado.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\avocado.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-blue.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-blue.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-green.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-green.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-unica.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-unica.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\gray.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\gray.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\grid-light.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\grid-light.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\grid.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\grid.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\sand-signika.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\sand-signika.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\skies.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\skies.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\sunset.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\sunset.src.js" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\3d-column-interactive\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\3d-column-null-values\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\3d-column-stacking-grouping\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\3d-pie-donut\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\3d-pie\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\3d-scatter-draggable\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\annotations\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\area-basic\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\area-inverted\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\area-missing\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\area-negative\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\area-stacked-percent\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\area-stacked\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\arearange-line\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\arearange\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\areaspline\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\bar-basic\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\bar-negative-stack\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\bar-stacked\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\bellcurve\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\box-plot\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\bubble-3d\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\bubble\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\bullet-graph\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\chart-update\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-basic\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-drilldown\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-negative\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-parsed\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-placement\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-rotated-labels\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-stacked-and-grouped\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-stacked-percent\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\column-stacked\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\columnrange\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\combo-dual-axes\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\combo-meteogram\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\combo-multi-axes\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\combo-regression\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\combo-timeline\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\combo\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\dynamic-click-to-add\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\dynamic-master-detail\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\dynamic-update\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\error-bar\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\funnel\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\gauge-activity\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\gauge-clock\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\gauge-dual\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\gauge-solid\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\gauge-speedometer\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\gauge-vu-meter\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\heatmap-canvas\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\heatmap\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\histogram\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\honeycomb-usa\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\item-series\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\line-ajax\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\line-basic\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\line-boost\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\line-labels\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\line-log-axis\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\line-time-series\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\parallel-coordinates\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pareto\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pie-basic\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pie-donut\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pie-drilldown\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pie-gradient\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pie-legend\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pie-monochrome\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pie-semi-circle\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\polar-spider\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\polar-wind-rose\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\polar\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\polygon\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\pyramid\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\renderer\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\responsive\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\sankey-diagram\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\scatter-boost\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\scatter\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\sparkline\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\spline-inverted\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\spline-irregular-time\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\spline-plot-bands\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\spline-symbols\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\streamgraph\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\styled-mode-column\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\styled-mode-pie\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\sunburst\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\synchronized-charts\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\treemap-coloraxis\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\treemap-large-dataset\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\treemap-with-levels\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\variable-radius-pie\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\variwide\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\vector-plot\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\waterfall\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\windbarb-series\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\wordcloud\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\examples\x-range\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\gfx\vml-radial-gradient.png" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\graphics\earth.svg" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\graphics\meteogram-symbols-30px.png" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\graphics\search.png" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\graphics\skies.jpg" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\graphics\snow.png" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\graphics\sun.png" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\index.htm" />
+    <Content Include="Content\admin_dark\js\plugins\jasny\jasny-bootstrap.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\jvectormap\jquery-jvectormap-2.0.3.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Content\admin_dark\js\plugins\markdown\bootstrap-markdown.js" />
+    <Content Include="Content\admin_dark\js\plugins\markdown\markdown.js" />
+    <Content Include="Content\admin_dark\js\plugins\metismenu\jquery.metisMenu.js" />
+    <Content Include="Content\admin_dark\js\plugins\morris\LICENSE.txt" />
+    <Content Include="Content\admin_dark\js\plugins\morris\morris-script.js" />
+    <Content Include="Content\admin_dark\js\plugins\morris\morris.css" />
+    <Content Include="Content\admin_dark\js\plugins\morris\morris.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\morris\raphael-min.js" />
+    <Content Include="Content\admin_dark\js\plugins\nouislider\nouislider.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\peity\jquery.peity.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\peity\peity-script.js" />
+    <Content Include="Content\admin_dark\js\plugins\scrollbar\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\select2\select2.full.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\sparkline\sparkline-script.js" />
+    <Content Include="Content\admin_dark\js\plugins\summernote\summernote.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\plugins\tooltipster\sideTip\themes\tooltipster-sideTip-borderless.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\plugins\tooltipster\sideTip\themes\tooltipster-sideTip-light.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\plugins\tooltipster\sideTip\themes\tooltipster-sideTip-noir.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\plugins\tooltipster\sideTip\themes\tooltipster-sideTip-punk.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\plugins\tooltipster\sideTip\themes\tooltipster-sideTip-shadow.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\tooltipster.bundle.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\tooltipster.bundle.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\tooltipster.main.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\css\tooltipster.main.min.css" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\js\plugins\tooltipster\SVG\tooltipster-SVG.js" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\js\plugins\tooltipster\SVG\tooltipster-SVG.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\js\tooltipster.bundle.js" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\js\tooltipster.bundle.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\js\tooltipster.main.js" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\dist\js\tooltipster.main.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\uploadify\jquery.uploadify-3.1.js" />
+    <Content Include="Content\admin_dark\js\plugins\uploadify\jquery.uploadify-3.1.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\uploadify\jquery.uploadify.js" />
+    <Content Include="Content\admin_dark\js\plugins\uploadify\uploader.swf" />
+    <Content Include="Content\admin_dark\js\plugins\uploadify\uploadify-cancel.png" />
+    <Content Include="Content\admin_dark\js\plugins\uploadify\uploadify.css" />
+    <Content Include="Content\admin_dark\js\plugins\uploadify\uploadify.swf" />
+    <Content Include="Content\admin_dark\js\plugins\wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="Content\admin_dark\js\plugins\wizard\MIT-LICENSE.txt" />
+    <Content Include="Content\admin_dark\js\respond.min.js" />
+    <Content Include="Content\admin_dark\png\avail - Copy.png" />
+    <Content Include="Content\admin_dark\png\avail.png" />
+    <Content Include="Content\admin_dark\png\Energy Icon1.png" />
+    <Content Include="Content\admin_dark\png\f.png" />
+    <Content Include="Content\admin_dark\png\g.png" />
+    <Content Include="Content\admin_dark\png\inisiativ.png" />
+    <Content Include="Content\admin_dark\png\Max.png" />
+    <Content Include="Content\admin_dark\png\profit.png" />
+    <Content Include="Content\admin_dark\png\safety.png" />
+    <Content Include="Content\admin_dark\sweetalert\sweetalert2.min.css" />
+    <Content Include="Content\admin_dark\sweetalert\sweetalert2.min.js" />
+    <Content Include="Content\core\adding\js\ckeditor.js" />
+    <Content Include="Content\core\adding\js\jquery-ui.min.js" />
+    <Content Include="Content\core\adding\js\login.js" />
+    <Content Include="Content\core\adding\js\moment.min.js" />
+    <Content Include="Content\core\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\core\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\core\bootstrap\js\npm.js" />
+    <Content Include="Content\datagrid.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\avatar.jpg" />
+    <Content Include="Images\banner.png" />
+    <Content Include="Images\bg-01.jpg" />
+    <Content Include="Images\bg-02.jpg" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logopertamina.png" />
+    <Content Include="Images\logoputih.png" />
+    <Content Include="Images\RAM.JPG" />
+    <Content Include="Js\Chart.bundle.min.js" />
+    <Content Include="Js\Chart.js" />
+    <Content Include="Js\Copy of Chart.js" />
+    <Content Include="Js\jquery-1.3.2.min.js" />
+    <Content Include="Js\popAlert.js" />
+    <Content Include="packages.config" />
+    <Content Include="Content\admin_dark\css\mouldifi-core.css.map" />
+    <Content Include="Content\admin_dark\css\plugins\summernote\font\summernote.eot" />
+    <Content Include="Content\admin_dark\css\plugins\summernote\font\summernote.ttf" />
+    <Content Include="Content\admin_dark\css\plugins\summernote\font\summernote.woff" />
+    <Content Include="Content\admin_dark\fonts\entypo.eot" />
+    <Content Include="Content\admin_dark\fonts\entypo.ttf" />
+    <Content Include="Content\admin_dark\fonts\entypo.woff" />
+    <Content Include="Content\admin_dark\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\admin_dark\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\admin_dark\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\admin_dark\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\admin_dark\fonts\FontAwesome.otf" />
+    <Content Include="Content\admin_dark\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\admin_dark\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\admin_dark\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\admin_dark\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\admin_dark\js\plugins\bootstrap-wysihtml5\LICENCE" />
+    <Content Include="Content\admin_dark\js\plugins\c3\LICENSE" />
+    <Content Include="Content\admin_dark\js\plugins\chartist\LICENSE-MIT" />
+    <Content Include="Content\admin_dark\js\plugins\chartjs\LICENSE.md" />
+    <Content Include="Content\admin_dark\js\plugins\colorpicker\LICENSE" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\AutoFill\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\common.scss" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\css\mixins.scss" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Buttons\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColReorder\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\ColVis\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedColumns\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\FixedHeader\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\KeyTable\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\RowReorder\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Scroller\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\Select\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Content\admin_dark\js\plugins\datatables\extensions\TableTools\Readme.md" />
+    <Content Include="Content\admin_dark\js\plugins\easypiechart\demo\style.less" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\css\highcharts.scss" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts-3d.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts-more.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\highcharts.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts-3d.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts-more.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\highcharts.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\accessibility.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\annotations.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\boost-canvas.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\boost.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\broken-axis.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\bullet.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\data.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\drag-panes.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\drilldown.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\export-data.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\exporting.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\funnel.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\gantt.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\grid-axis.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\heatmap.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\histogram-bellcurve.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\item-series.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\no-data-to-display.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\offline-exporting.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\oldie.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\overlapping-datalabels.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\parallel-coordinates.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\pareto.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\sankey.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\series-label.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\solid-gauge.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\static-scale.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\stock.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\streamgraph.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\sunburst.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\tilemap.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\treemap.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\variable-pie.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\variwide.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\vector.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\windbarb.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\wordcloud.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\modules\xrange.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\avocado.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-blue.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-green.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\dark-unica.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\gray.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\grid-light.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\grid.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\sand-signika.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\skies.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\js\themes\sunset.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\accessibility.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\annotations.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\boost-canvas.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\boost.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\broken-axis.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\bullet.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\data.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\drag-panes.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\drilldown.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\export-data.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\exporting.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\funnel.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\gantt.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\grid-axis.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\heatmap.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\histogram-bellcurve.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\item-series.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\no-data-to-display.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\offline-exporting.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\oldie.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\overlapping-datalabels.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\parallel-coordinates.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\pareto.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\sankey.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\series-label.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\solid-gauge.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\static-scale.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\stock.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\streamgraph.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\sunburst.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\tilemap.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\treemap.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\variable-pie.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\variwide.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\vector.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\windbarb.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\wordcloud.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\modules\xrange.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\avocado.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-blue.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-green.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\dark-unica.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\gray.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\grid-light.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\grid.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\sand-signika.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\skies.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\highchart\code\themes\sunset.js.map" />
+    <Content Include="Content\admin_dark\js\plugins\jvectormap\LICENSE-AGPL" />
+    <Content Include="Content\admin_dark\js\plugins\markdown\LICENSE" />
+    <Content Include="Content\admin_dark\js\plugins\metismenu\LICENSE" />
+    <Content Include="Content\admin_dark\js\plugins\peity\MIT-LICENCE" />
+    <Content Include="Content\admin_dark\js\plugins\scrollbar\LICENSE" />
+    <Content Include="Content\admin_dark\js\plugins\select2\LICENSE.md" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\bower.json" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\LICENSE" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\package.json" />
+    <Content Include="Content\admin_dark\js\plugins\tooltipster\README.md" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\04a7ea46b1d177991d1114ad656394209140945f\mouldifi-core.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\348ce30c94deae28355121e92ed6c975de4ec8dc\mouldifi-core.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_accordions.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_alerts.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_badges.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_base.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_breadcrumbs.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_buttons.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_carousel.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_dashboards.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_filter.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_footer.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_forms.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_global.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_graphs.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_header.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_icons.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_input-groups.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_labels.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_mailbox.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_mixins.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_navbar.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_navs.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_pager.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_panels.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_popovers.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_progress-bars.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_sidebar.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_tables.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_typography.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_variables.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_various-screens.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_views.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_accordions.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_alerts.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_badges.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_base.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_breadcrumbs.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_buttons.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_carousel.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_dashboards.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_filter.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_footer.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_forms.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_global.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_graphs.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_header.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_icons.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_input-groups.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_labels.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_mailbox.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_mixins.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_modals.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_navbar.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_navs.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_pager.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_panels.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_popovers.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_progress-bars.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_sidebar.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_tables.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_typography.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_variables.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_various-screens.scssc" />
+    <Content Include="Content\admin_dark\sass\.sass-cache\94da4fe0b58dafbbc80176891d83ac52715a75aa\_views.scssc" />
+    <Content Include="Content\admin_dark\sass\components\_accordions.scss" />
+    <Content Include="Content\admin_dark\sass\components\_alerts.scss" />
+    <Content Include="Content\admin_dark\sass\components\_badges.scss" />
+    <Content Include="Content\admin_dark\sass\components\_base.scss" />
+    <Content Include="Content\admin_dark\sass\components\_breadcrumbs.scss" />
+    <Content Include="Content\admin_dark\sass\components\_buttons.scss" />
+    <Content Include="Content\admin_dark\sass\components\_carousel.scss" />
+    <Content Include="Content\admin_dark\sass\components\_dashboards.scss" />
+    <Content Include="Content\admin_dark\sass\components\_filter.scss" />
+    <Content Include="Content\admin_dark\sass\components\_footer.scss" />
+    <Content Include="Content\admin_dark\sass\components\_forms.scss" />
+    <Content Include="Content\admin_dark\sass\components\_global.scss" />
+    <Content Include="Content\admin_dark\sass\components\_graphs.scss" />
+    <Content Include="Content\admin_dark\sass\components\_header.scss" />
+    <Content Include="Content\admin_dark\sass\components\_icons.scss" />
+    <Content Include="Content\admin_dark\sass\components\_input-groups.scss" />
+    <Content Include="Content\admin_dark\sass\components\_labels.scss" />
+    <Content Include="Content\admin_dark\sass\components\_mailbox.scss" />
+    <Content Include="Content\admin_dark\sass\components\_mixins.scss" />
+    <Content Include="Content\admin_dark\sass\components\_modals.scss" />
+    <Content Include="Content\admin_dark\sass\components\_navbar.scss" />
+    <Content Include="Content\admin_dark\sass\components\_navs.scss" />
+    <Content Include="Content\admin_dark\sass\components\_pager.scss" />
+    <Content Include="Content\admin_dark\sass\components\_panels.scss" />
+    <Content Include="Content\admin_dark\sass\components\_popovers.scss" />
+    <Content Include="Content\admin_dark\sass\components\_progress-bars.scss" />
+    <Content Include="Content\admin_dark\sass\components\_sidebar.scss" />
+    <Content Include="Content\admin_dark\sass\components\_tables.scss" />
+    <Content Include="Content\admin_dark\sass\components\_typography.scss" />
+    <Content Include="Content\admin_dark\sass\components\_variables.scss" />
+    <Content Include="Content\admin_dark\sass\components\_various-screens.scss" />
+    <Content Include="Content\admin_dark\sass\components\_views.scss" />
+    <Content Include="Content\admin_dark\sass\mouldifi-core.scss" />
+    <Content Include="Content\core\adding\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\core\adding\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\core\adding\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\core\adding\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\core\adding\fonts\ionicons.eot" />
+    <Content Include="Content\core\adding\fonts\ionicons.ttf" />
+    <Content Include="Content\core\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\core\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\jquery.datepicker.css" />
+    <Content Include="Content\admin_dark\js\plugins\uploadify\uploader.fla" />
+    <None Include="Properties\PublishProfiles\IACT.pubxml" />
+    <None Include="Properties\PublishProfiles\IACTEmployee.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Pages\Dashboard.ascx" />
+    <Content Include="Pages\DraftTindakan.ascx" />
+    <Content Include="Pages\LoadDashboard.ascx" />
+    <Content Include="Pages\ReportAllTask.ascx" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Tugas.ascx" />
+    <Content Include="Pages\MonitorTindakan.ascx" />
+    <Content Include="Pages\MasterSumber.ascx" />
+    <Content Include="Pages\Home.ascx" />
+    <Content Include="Pages\Base.aspx" />
+    <Content Include="Pages\MasterRekomendasi.ascx" />
+    <Content Include="Scripts\Chart.PieceLabel.js" />
+    <Content Include="Scripts\chartjs.plugin.datalabels.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\Json2.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\utils.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Services\Chart.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="DAO\KomentarDAO.cs" />
+    <Compile Include="DAO\CounterDAO.cs" />
+    <Compile Include="DAO\EvidenceDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\LogDAO.cs" />
+    <Compile Include="DAO\NotulenDAO.cs" />
+    <Compile Include="DAO\PekerjaDAO.cs" />
+    <Compile Include="DAO\SumberDAO.cs" />
+    <Compile Include="DAO\General.cs" />
+    <Compile Include="DAO\RekomendasiDAO.cs" />
+    <Compile Include="DAO\UMActionMenuDAO.cs" />
+    <Compile Include="DAO\UMActionRoleDAO.cs" />
+    <Compile Include="DAO\UMFunctionInCCDAO.cs" />
+    <Compile Include="DAO\UMRoleDAO.cs" />
+    <Compile Include="DAO\UMUserDAO.cs" />
+    <Compile Include="DAO\UMUserInRoleDAO.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Komentar.cs" />
+    <Compile Include="Domain\Evidence.cs" />
+    <Compile Include="Domain\Counter.cs" />
+    <Compile Include="Domain\Log.cs" />
+    <Compile Include="Domain\Notulen.cs" />
+    <Compile Include="Domain\Pekerja.cs" />
+    <Compile Include="Domain\Sumber.cs" />
+    <Compile Include="Domain\Default.cs" />
+    <Compile Include="Domain\Rekomendasi.cs" />
+    <Compile Include="Domain\UMActionMenu.cs" />
+    <Compile Include="Domain\UMActionRole.cs" />
+    <Compile Include="Domain\UMFunctionInCC .cs" />
+    <Compile Include="Domain\UMRole.cs" />
+    <Compile Include="Domain\UMUser.cs" />
+    <Compile Include="Domain\UMUserInRole.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dashboard.ascx.cs">
+      <DependentUpon>Dashboard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Dashboard.ascx.designer.cs">
+      <DependentUpon>Dashboard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DraftTindakan.ascx.cs">
+      <DependentUpon>DraftTindakan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DraftTindakan.ascx.designer.cs">
+      <DependentUpon>DraftTindakan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoadDashboard.ascx.cs">
+      <DependentUpon>LoadDashboard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LoadDashboard.ascx.designer.cs">
+      <DependentUpon>LoadDashboard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReportAllTask.ascx.cs">
+      <DependentUpon>ReportAllTask.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ReportAllTask.ascx.designer.cs">
+      <DependentUpon>ReportAllTask.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tugas.ascx.cs">
+      <DependentUpon>Tugas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tugas.ascx.designer.cs">
+      <DependentUpon>Tugas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MonitorTindakan.ascx.cs">
+      <DependentUpon>MonitorTindakan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MonitorTindakan.ascx.designer.cs">
+      <DependentUpon>MonitorTindakan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MasterSumber.ascx.cs">
+      <DependentUpon>MasterSumber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MasterSumber.ascx.designer.cs">
+      <DependentUpon>MasterSumber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.ascx.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.ascx.designer.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Base.aspx.cs">
+      <DependentUpon>Base.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Base.aspx.designer.cs">
+      <DependentUpon>Base.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MasterRekomendasi.ascx.cs">
+      <DependentUpon>MasterRekomendasi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MasterRekomendasi.ascx.designer.cs">
+      <DependentUpon>MasterRekomendasi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Chart.asmx.cs">
+      <DependentUpon>Chart.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\Upload.ashx.cs">
+      <DependentUpon>Upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="Content\admin\css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Services\Upload.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6035</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/I_ACT</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

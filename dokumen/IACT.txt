@@ -1,0 +1,8 @@
+- OPEN = Abu-abu
+- Waiting Approval = Hijau
+- Overdue = Merah
+- Closed = biru
+- Closed Overdue = orange
+----------------------
+- NOTULEN = Tindak lanjut
+- Laporan menampilkan semua rekomendasi

@@ -1,0 +1,11 @@
+- Modul Action Tracking
+ * tambah filter untuk recomendation
+ * tambah filter untuk source
+ * Registration Number
+ * status di hitamkan semua, diganti jadi progressbar
+ * pilih tanggal task
+
+
+- PIC bisa membrikan comment pada saat delegasi
+
+- Report bisa pilih, title mana saja yang ingin diprint

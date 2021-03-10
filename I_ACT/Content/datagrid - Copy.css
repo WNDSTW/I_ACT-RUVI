@@ -1,0 +1,315 @@
+﻿
+.GridCustom{ 
+    border-left:0;
+    border-right:0;
+    border-top:0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+	
+.GridCustom_Spec td{
+    margin: 1px 4px 1px 1px;
+    color:#fff;
+    padding: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 9pt;
+}
+.GridCustom td{
+    margin: 1px 4px 1px 1px;
+   
+    border-left:0;
+    border-right:0;
+    border-top:0;
+    padding: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 11pt;
+    border-bottom:solid 1px #272c30 !important;
+}
+.gridcatalog td{
+    margin: 1px 4px 1px 1px;
+    color:#fff;
+    padding: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 9pt;
+     border: solid 1px #fff
+}
+.GridCustom2 td{
+    margin: 4px 4px 4px 10px;
+    color:#fff;
+    padding: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 9pt;
+    border: solid 1px #fff
+}
+
+.GridCustomHeader{
+    font-weight: bold;
+    background-color: #32599c;
+    color:#fff;
+    text-align:center;
+    height:35px; 
+    border-top:0;
+}
+
+
+.GridCustomFooter{
+    font-weight: bold;
+    color:#fff;
+    /*background-color: #c3f1c3;*/
+    background-color: #272c30;
+    height:25px; 
+}
+
+.GridCustomHeader a:hover{
+    text-decoration: underline;
+}
+.GridCustomItem{
+    background-color: transparent;
+     color:#000;
+    height:25px;
+  -webkit-transition:background  1s,color  1s;
+  transition: background 1s, color  1s;
+    border-bottom:solid 1px #fff;
+    border-left:0;
+    border-right:0;
+}
+.GridCustomItem:hover{
+    background-color: #8BC34A;
+    color:#000;
+}
+.GridCustomAltItem{
+	/*background-color: #e7f9e2;*/
+    height:25px;
+     color:#fff;
+     background-color: #353c42;
+     
+  -webkit-transition:background  1s,color  1s;
+  transition: background 1s, color  1s;
+    /*background: #fcfcfc url(../Images/grid-alt.png) repeat-x top;*/
+}
+.GridCustomAltItem:hover{
+    background-color:#8BC34A;
+    color:#000;
+}
+
+.GridCustomItem2{
+    /*background-color: #e7f9e2;*/
+    background-color: #a2a8ff;
+  
+}
+.GridCustomAltItem2{
+	background-color: #FFFFFF;
+}
+
+.btnGridCustom{
+	/*background-color: #e7f9e2;*/
+    height:25px;
+     color:#000000;
+     background-color: transparent;
+     
+  -webkit-transition:background  1s,color  1s;
+  transition: background 1s, color  1s;
+    /*background: #fcfcfc url(../Images/grid-alt.png) repeat-x top;*/
+}
+.btnGridCustom:hover{
+    color:#fff;
+}
+
+
+.GridCustomPages{
+	/*background-color: #e7f9e2;*/
+    color:#fff;
+     background-color: #272c30;
+     padding-left:10px;
+     margin-left:10px;
+     
+    /*background: #fcfcfc url(../Images/grid-pgr.png) repeat-x top;*/
+}
+.GridCustomPages a, .GridCustomPages span
+    {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        font-weight: bold;
+        text-align: center;
+        text-anchor:middle;
+        text-decoration: none;
+    }
+    .GridCustomPages a
+    {
+        background-color: #fff;
+        padding-top:5px;
+        color: #000;
+        border: 1px solid #fff;
+    }
+    .GridCustomPages span
+    {
+        background-color:#673AB7;
+        color: #fff;
+        padding-top:5px;
+        border: 1px solid #673AB7;
+    }
+
+
+    
+ /*////////////////////////////////////////////BOX GRID////////////////////////////////////////////*/
+ .GridBox{ 
+     
+}
+.GridBox td{
+    margin: 1px 4px 1px 1px;
+   
+    padding: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 11pt;
+    border:solid 1px #9C27B0 !important;
+}
+.gridcatalog td{
+    margin: 1px 4px 1px 1px;
+    color:#fff;
+    padding: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 9pt;
+     border: solid 1px #fff
+}
+.GridBox2 td{
+    margin: 4px 4px 4px 10px;
+    color:#fff;
+    padding: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 9pt;
+    border: solid 1px #fff
+}
+
+.GridBoxHeader{
+    font-weight: bold;
+    background-color: #9C27B0;
+    color:#fff;
+    text-align:center;
+    height:35px; 
+    border-top:0;
+}
+
+
+.GridBoxFooter{
+    font-weight: bold;
+    color:#fff;
+    /*background-color: #c3f1c3;*/
+    background-color: #272c30;
+    height:25px; 
+}
+
+.GridBoxHeader a:hover{
+    text-decoration: underline;
+}
+.GridBoxItem{
+    background-color: transparent;
+     color:#fff;
+    height:25px;
+  -webkit-transition:background  1s,color  1s;
+  transition: background 1s, color  1s;
+    border-bottom:solid 1px #fff;
+    border-left:0;
+    border-right:0;
+}
+.GridBoxItem:hover{
+    background-color: #8BC34A;
+    color:#000;
+}
+.GridBoxAltItem{
+	/*background-color: #e7f9e2;*/
+    height:25px;
+     color:#fff;
+     background-color: #353c42;
+     
+  -webkit-transition:background  1s,color  1s;
+  transition: background 1s, color  1s;
+    /*background: #fcfcfc url(../Images/grid-alt.png) repeat-x top;*/
+}
+.GridBoxAltItem:hover{
+    background-color:#8BC34A;
+    color:#000;
+}
+
+.GridBoxItem2{
+    /*background-color: #e7f9e2;*/
+    background-color: #a2a8ff;
+  
+}
+.GridBoxAltItem2{
+	background-color: #FFFFFF;
+}
+
+.btnGridBox{
+	/*background-color: #e7f9e2;*/
+    height:25px;
+     color:#000000;
+     background-color: transparent;
+     
+  -webkit-transition:background  1s,color  1s;
+  transition: background 1s, color  1s;
+    /*background: #fcfcfc url(../Images/grid-alt.png) repeat-x top;*/
+}
+.btnGridBox:hover{
+    color:#fff;
+}
+
+
+.GridBoxPages{
+	/*background-color: #e7f9e2;*/
+    color:#fff;
+     background-color: #272c30;
+     padding-left:10px;
+     margin-left:10px;
+     
+    /*background: #fcfcfc url(../Images/grid-pgr.png) repeat-x top;*/
+}
+.GridBoxPages a, .GridBoxPages span
+    {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        font-weight: bold;
+        text-align: center;
+        text-anchor:middle;
+        text-decoration: none;
+    }
+    .GridBoxPages a
+    {
+        background-color: #fff;
+        padding-top:5px;
+        color: #000;
+        border: 1px solid #fff;
+    }
+    .GridBoxPages span
+    {
+        background-color:#673AB7;
+        color: #fff;
+        padding-top:5px;
+        border: 1px solid #673AB7;
+    }
+ /*-------------------------------------------------------------------------------------------------*/
+ 
+.Materialize
+{
+    border:0px;
+    background-color:transparent;
+    color:#fff;
+    border-bottom:solid 1px #fff;
+    width:100%;
+  -webkit-transition:background  1s,border-color  1s;
+  transition: border-color ease-in-out 1s,box-shadow ease-in-out 1s;
+}
+
+.Materialize:focus
+{
+    border-color :#9C27B0;
+}
+
+
+ /*////////////////////////////////////////////DROPDOWNLIST////////////////////////////////////////////*/
+
+.dropdownlist
+{
+    padding-top:2px;
+    padding-bottom:2px;
+}
